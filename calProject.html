@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+
+    <input type="number " id="firstinput">
+    <select name="operation" id="operation">
+        <option value="+"> +</option>
+        <option value="-"> -</option>
+        <option value="*"> x</option>
+        <option value="/"> /</option>
+
+    </select>
+    
+    <input type="number" id="secondinput" ><br> <br>
+    <button type="submit" onclick="cal()" style="height: 20px ; width: 100px ; color: blue;" > Calculate </button>
+    <input type="text" readonly id="result" class="result">
+    <!-- <div class="results" ></div> -->
+</body>
+
+<script>
+
+function cal() {
+   var  input1 = document.getElementById('firstinput').value;
+   var  input2 = document.getElementById('secondinput').value;
+   var operation = document.getElementById('operation').value;
+ 
+   if(operation== '+'){
+    var result= parseInt(input1)+parseInt(input2);
+    document.getElementById('result').value=result;
+   }
+   if(operation== '-'){
+    var result= parseInt(input1)-parseInt(input2);
+    document.getElementById('result').value=result;
+   }
+   if(operation== '*'){
+    var result= parseInt(input1)*parseInt(input2);
+    document.getElementById('result').value=result;
+   }
+   if(operation== '/'){
+    var result= parseInt(input1)/parseInt(input2);
+    document.getElementById('result').value=result;
+   }
+
+}
+</script>
+
+</html> 
